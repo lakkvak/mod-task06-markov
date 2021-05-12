@@ -18,7 +18,7 @@ TEST(task1, test1)
 TEST(task2, test1)
 {
     vector<string> words{ "Long", "Live"};
-    GenMarkov markov(words, 3, 1000);
+    GenMarkov markov(words, 2, 1000);
     ASSERT_STREQ("Long Live ", markov.Generate().c_str());
 }
 
