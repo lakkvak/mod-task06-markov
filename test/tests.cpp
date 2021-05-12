@@ -25,8 +25,8 @@ TEST(task2, test1)
 TEST(task3, test1)
 {
     map<deque<string>, vector<string>> m;
-    mma[{ "Long", "live" }].push_back("God");
-    mma[{"live", "God"}].push_back("|_Last prefix_|");
+    m[{ "Long", "live" }].push_back("God");
+    m[{"live", "God"}].push_back("|_Last prefix_|");
     GenMarkov markov(m, 1000);
     string output = markov.Generate();
     if (output[0] == 'L')
@@ -38,10 +38,10 @@ TEST(task3, test1)
 TEST(task4, test1)
 {
     map<deque<string>, vector<string>> m;
-    mma[{"Enjoy", "the"}].push_back("ride");
-    mma[{"Enjoy", "the"}].push_back("moment");
-    mma[{"the", "ride"}].push_back("|_Last prefix_|");
-    mma[{"the", "moment"}].push_back("|_Last prefix_|");
+    m[{"Enjoy", "the"}].push_back("ride");
+    m[{"Enjoy", "the"}].push_back("moment");
+    m[{"the", "ride"}].push_back("|_Last prefix_|");
+    m[{"the", "moment"}].push_back("|_Last prefix_|");
 
     GenMarkov markov(m, 100);
     string output = markov.Generate();
